@@ -33,6 +33,9 @@ namespace API.Migrations
                     b.Property<string>("pictureURL")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("userName")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("id");
 
                     b.ToTable("player");

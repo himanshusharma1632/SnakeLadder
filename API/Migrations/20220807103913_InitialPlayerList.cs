@@ -2,7 +2,7 @@
 
 namespace API.Migrations
 {
-    public partial class InitialPlayers : Migration
+    public partial class InitialPlayerList : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,6 +13,7 @@ namespace API.Migrations
                     id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     name = table.Column<string>(type: "TEXT", nullable: true),
+                    userName = table.Column<string>(type: "TEXT", nullable: true),
                     avatarURL = table.Column<string>(type: "TEXT", nullable: true),
                     pictureURL = table.Column<string>(type: "TEXT", nullable: true),
                     description = table.Column<string>(type: "TEXT", nullable: true)

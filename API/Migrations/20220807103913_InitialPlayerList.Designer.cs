@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(GameContext))]
-    [Migration("20220806102444_InitialPlayers")]
-    partial class InitialPlayers
+    [Migration("20220807103913_InitialPlayerList")]
+    partial class InitialPlayerList
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,6 +33,9 @@ namespace API.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("pictureURL")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("userName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("id");
